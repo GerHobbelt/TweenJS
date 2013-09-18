@@ -548,6 +548,34 @@ var p = Tween.prototype = new createjs.EventDispatcher();
 	};
 
 // public methods:
+	
+	/**
+	 * Resets this tween to clear its timeline for reuse.
+	 * @method reset
+	 * @return {Tween} This tween instance (for chaining calls).
+	 **/
+	p.reset = function() {
+		this._steps.length = 0;
+		this._actions.length = 0;
+		this._rawPosition = 0;
+		this._prevPosition = 0;
+		this._stepPosition = 0;
+		this._prevPos = -1;
+		this.duration = 0;
+		this.position = null;
+		if(this._curQueueProps)
+		{
+			for(var key in this._curQueueProps)
+				delete this._curQueueProps[key];
+		}
+		if(this._initQueueProps)
+		{
+			for(var key in this._initQueueProps)
+				delete this._initQueueProps[key];
+		}
+		return this;
+	}
+	
 	/**
 	 * Queues a wait (essentially an empty tween).
 	 * @example
@@ -663,6 +691,7 @@ var p = Tween.prototype = new createjs.EventDispatcher();
 			else {
 				t = this.duration;
 				end = true;
+				this.setPaused(true);
 			}
 		}
 		if (t == this._prevPos) { return end; }
@@ -700,7 +729,7 @@ var p = Tween.prototype = new createjs.EventDispatcher();
 			}
 		}
 
-		if (end) { this.setPaused(true); }
+		//if (end) { this.setPaused(true); }
 
         this.dispatchEvent("change");
 		return end;
