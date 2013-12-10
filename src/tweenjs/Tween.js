@@ -642,6 +642,7 @@ var p = Tween.prototype = new createjs.EventDispatcher();
 	 * @return {Tween} This tween instance (for chaining calls).
 	 */
 	p.set = function(props, target) {
+		this._appendQueueProps(props);
 		return this._addAction({f:this._set, o:this, p:[props, target ? target : this._target]});
 	};
 
