@@ -1,0 +1,16 @@
+{
+    "name": "TweenJS",
+    "version": "0.4.1",
+    "main": "lib/tweenjs-0.4.1.min.js",
+    "ignore": [
+        "README.md",
+        "README_CREATEJS_NAMESPACE.txt",
+        "VERSIONS.txt",
+        "tools",
+        "src",
+        "examples",
+        "docs",
+        "build",
+        "lib/README.txt"
+    ]
+}
