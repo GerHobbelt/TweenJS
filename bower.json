@@ -1,5 +1,5 @@
 {
-    "name": "TweenJS",
+    "name": "tweenjs",
     "version": "0.4.1",
     "main": "lib/tweenjs-0.4.1.min.js",
     "ignore": [
