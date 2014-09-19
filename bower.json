@@ -1,16 +1,29 @@
 {
-    "name": "tweenjs",
-    "version": "0.4.1",
-    "main": "lib/tweenjs-0.4.1.min.js",
-    "ignore": [
-        "README.md",
-        "README_CREATEJS_NAMESPACE.txt",
-        "VERSIONS.txt",
-        "tools",
-        "src",
-        "examples",
-        "docs",
-        "build",
-        "lib/README.txt"
-    ]
+	"name": "TweenJS",
+	"version": "0.5.1",
+	"homepage": "https://github.com/CreateJS/TweenJS",
+	"authors": [
+		"gskinner",
+		"lannymcnie",
+		"wdamien"
+	],
+	"description": "A simple but powerful tweening / animation library for Javascript. Part of the CreateJS suite of libraries.",
+	"main": "lib/tweenjs.combined.js",
+	"keywords": [
+		"tween",
+		"tweening",
+		"animation",
+		"createjs"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"build",
+		"docs",
+		"examples",
+		"tools",
+		"src"
+	]
 }

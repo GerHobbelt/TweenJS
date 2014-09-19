@@ -1,5 +1,16 @@
 Version NEXT [Not Released]
 ****************************************************************************************************
+- Added bower support, including grunt task for updating the bower.json
+- Fixed issue with setPaused() stacking up tween ticks
+
+
+Version 0.5.1 [December 12, 2013]
+****************************************************************************************************
+- Updates to EventDispatcher for latest combined build
+
+
+Version 0.5.0 [September 25, 2013]
+****************************************************************************************************
 CRITICAL (may break existing content):
 - removed all onEvent handlers (ex. onClick, onTick, onAnimationEnd, etc)
 
@@ -17,7 +28,6 @@ CRITICAL (may break existing content):
 - Updated Ticker usage to use EventDispatcher instead. Added handleEvent to propagate tick event
 - Added TweenOnlyDemo to show TweenJS usage without EaselJS
 - Fixed incorrectly doc'd Timeline documented put all Timeline APIs into Tween instead.
-- Added "use strict"; to everything.
 - fixed an issue with EventDispatcher when adding the same listener to an event twice
 - fixed hasActiveTweens to return a Boolean consistently
 - added Timeline.getLabels() & getCurrentLabel()
