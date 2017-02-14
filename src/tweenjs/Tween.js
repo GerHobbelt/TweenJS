@@ -722,7 +722,9 @@ this.createjs = this.createjs||{};
 
 		if (end) { this.setPaused(true); }
 
-        this.dispatchEvent("change");
+		this.dispatchEvent("change");
+		if (end) { this.dispatchEvent("complete"); }
+
 		return end;
 	};
 
